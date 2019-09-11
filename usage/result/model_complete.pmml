@@ -1,0 +1,3398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.3">
+	<Header>
+		<Application name="JPMML-SkLearn" version="1.5.12"/>
+		<Timestamp>2019-09-09T12:24:49Z</Timestamp>
+	</Header>
+	<MiningBuildTask>
+		<Extension>PMMLPipeline(steps=[('mapper', DataFrameMapper(default=False, df_out=False,
+        features=[(['EXT_SOURCE_2', 'EXT_SOURCE_3', 'EXT_SOURCE_1', 'SK_ID_CURR', 'DAYS_EMPLOYED', 'AMT_ANNUITY', 'DAYS_BIRTH', 'DAYS_REGISTRATION', 'AMT_CREDIT', 'DAYS_ID_PUBLISH', 'DAYS_LAST_PHONE_CHANGE', 'AMT_INCOME_TOTAL', 'AMT_GOODS_PRICE', 'AMT_REQ_CREDIT_BUREAU_YEAR', 'OWN_CAR_AGE', 'REGION_POPULATI...       dtype=&lt;class 'numpy.float64'&gt;, handle_unknown='ignore',
+       n_values=None, sparse=True)])],
+        input_df=False, sparse=False)),
+       ('model', XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=0.7669432774615002, gamma=0.794666500858587,
+       learning_rate=0.05766207939376316, max_delta_step=0, max_depth=10,
+       min_child_weight=58, missing=None, n_estimators=100, n_jobs=1,
+       nthread=None, objective='binary:logistic', random_state=1234,
+       reg_alpha=2.6892503561975354, reg_lambda=0.5979023778501519,
+       scale_pos_weight=1, seed=None, silent=True,
+       subsample=0.3685909207755131))])</Extension>
+	</MiningBuildTask>
+	<DataDictionary>
+		<DataField name="y" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="EXT_SOURCE_2" optype="continuous" dataType="double"/>
+		<DataField name="EXT_SOURCE_3" optype="continuous" dataType="double"/>
+		<DataField name="EXT_SOURCE_1" optype="continuous" dataType="double"/>
+		<DataField name="SK_ID_CURR" optype="continuous" dataType="double"/>
+		<DataField name="DAYS_EMPLOYED" optype="continuous" dataType="double"/>
+		<DataField name="AMT_ANNUITY" optype="continuous" dataType="double"/>
+		<DataField name="DAYS_BIRTH" optype="continuous" dataType="double"/>
+		<DataField name="DAYS_REGISTRATION" optype="continuous" dataType="double"/>
+		<DataField name="AMT_CREDIT" optype="continuous" dataType="double"/>
+		<DataField name="DAYS_ID_PUBLISH" optype="continuous" dataType="double"/>
+		<DataField name="DAYS_LAST_PHONE_CHANGE" optype="continuous" dataType="double"/>
+		<DataField name="AMT_INCOME_TOTAL" optype="continuous" dataType="double"/>
+		<DataField name="AMT_GOODS_PRICE" optype="continuous" dataType="double"/>
+		<DataField name="AMT_REQ_CREDIT_BUREAU_YEAR" optype="continuous" dataType="double"/>
+		<DataField name="OWN_CAR_AGE" optype="continuous" dataType="double"/>
+		<DataField name="REGION_POPULATION_RELATIVE" optype="continuous" dataType="double"/>
+		<DataField name="NONLIVINGAREA_MEDI" optype="continuous" dataType="double"/>
+		<DataField name="YEARS_BEGINEXPLUATATION_AVG" optype="continuous" dataType="double"/>
+		<DataField name="HOUR_APPR_PROCESS_START" optype="continuous" dataType="double"/>
+		<DataField name="LIVINGAREA_MODE" optype="continuous" dataType="double"/>
+		<DataField name="YEARS_BUILD_AVG" optype="continuous" dataType="double"/>
+		<DataField name="BASEMENTAREA_MODE" optype="continuous" dataType="double"/>
+		<DataField name="APARTMENTS_AVG" optype="continuous" dataType="double"/>
+		<DataField name="ORGANIZATION_TYPE" optype="categorical" dataType="string">
+			<Value value="Advertising"/>
+			<Value value="Agriculture"/>
+			<Value value="Bank"/>
+			<Value value="Business Entity Type 1"/>
+			<Value value="Business Entity Type 2"/>
+			<Value value="Business Entity Type 3"/>
+			<Value value="Cleaning"/>
+			<Value value="Construction"/>
+			<Value value="Culture"/>
+			<Value value="Electricity"/>
+			<Value value="Emergency"/>
+			<Value value="Government"/>
+			<Value value="Hotel"/>
+			<Value value="Housing"/>
+			<Value value="Industry: type 1"/>
+			<Value value="Industry: type 10"/>
+			<Value value="Industry: type 11"/>
+			<Value value="Industry: type 12"/>
+			<Value value="Industry: type 13"/>
+			<Value value="Industry: type 2"/>
+			<Value value="Industry: type 3"/>
+			<Value value="Industry: type 4"/>
+			<Value value="Industry: type 5"/>
+			<Value value="Industry: type 6"/>
+			<Value value="Industry: type 7"/>
+			<Value value="Industry: type 8"/>
+			<Value value="Industry: type 9"/>
+			<Value value="Insurance"/>
+			<Value value="Kindergarten"/>
+			<Value value="Legal Services"/>
+			<Value value="Medicine"/>
+			<Value value="Military"/>
+			<Value value="Mobile"/>
+			<Value value="Other"/>
+			<Value value="Police"/>
+			<Value value="Postal"/>
+			<Value value="Realtor"/>
+			<Value value="Religion"/>
+			<Value value="Restaurant"/>
+			<Value value="School"/>
+			<Value value="Security"/>
+			<Value value="Security Ministries"/>
+			<Value value="Self-employed"/>
+			<Value value="Services"/>
+			<Value value="Telecom"/>
+			<Value value="Trade: type 1"/>
+			<Value value="Trade: type 2"/>
+			<Value value="Trade: type 3"/>
+			<Value value="Trade: type 4"/>
+			<Value value="Trade: type 5"/>
+			<Value value="Trade: type 6"/>
+			<Value value="Trade: type 7"/>
+			<Value value="Transport: type 1"/>
+			<Value value="Transport: type 2"/>
+			<Value value="Transport: type 3"/>
+			<Value value="Transport: type 4"/>
+			<Value value="University"/>
+			<Value value="XNA"/>
+		</DataField>
+		<DataField name="NAME_EDUCATION_TYPE" optype="categorical" dataType="string">
+			<Value value="Academic degree"/>
+			<Value value="Higher education"/>
+			<Value value="Incomplete higher"/>
+			<Value value="Lower secondary"/>
+			<Value value="Secondary / secondary special"/>
+		</DataField>
+	</DataDictionary>
+	<TransformationDictionary>
+		<DerivedField name="float(EXT_SOURCE_2)" optype="continuous" dataType="float">
+			<FieldRef field="EXT_SOURCE_2"/>
+		</DerivedField>
+		<DerivedField name="float(EXT_SOURCE_3)" optype="continuous" dataType="float">
+			<FieldRef field="EXT_SOURCE_3"/>
+		</DerivedField>
+		<DerivedField name="float(EXT_SOURCE_1)" optype="continuous" dataType="float">
+			<FieldRef field="EXT_SOURCE_1"/>
+		</DerivedField>
+		<DerivedField name="float(SK_ID_CURR)" optype="continuous" dataType="float">
+			<FieldRef field="SK_ID_CURR"/>
+		</DerivedField>
+		<DerivedField name="float(DAYS_EMPLOYED)" optype="continuous" dataType="float">
+			<FieldRef field="DAYS_EMPLOYED"/>
+		</DerivedField>
+		<DerivedField name="float(AMT_ANNUITY)" optype="continuous" dataType="float">
+			<FieldRef field="AMT_ANNUITY"/>
+		</DerivedField>
+		<DerivedField name="float(DAYS_BIRTH)" optype="continuous" dataType="float">
+			<FieldRef field="DAYS_BIRTH"/>
+		</DerivedField>
+		<DerivedField name="float(DAYS_REGISTRATION)" optype="continuous" dataType="float">
+			<FieldRef field="DAYS_REGISTRATION"/>
+		</DerivedField>
+		<DerivedField name="float(AMT_CREDIT)" optype="continuous" dataType="float">
+			<FieldRef field="AMT_CREDIT"/>
+		</DerivedField>
+		<DerivedField name="float(DAYS_ID_PUBLISH)" optype="continuous" dataType="float">
+			<FieldRef field="DAYS_ID_PUBLISH"/>
+		</DerivedField>
+		<DerivedField name="float(DAYS_LAST_PHONE_CHANGE)" optype="continuous" dataType="float">
+			<FieldRef field="DAYS_LAST_PHONE_CHANGE"/>
+		</DerivedField>
+		<DerivedField name="float(AMT_INCOME_TOTAL)" optype="continuous" dataType="float">
+			<FieldRef field="AMT_INCOME_TOTAL"/>
+		</DerivedField>
+		<DerivedField name="float(AMT_GOODS_PRICE)" optype="continuous" dataType="float">
+			<FieldRef field="AMT_GOODS_PRICE"/>
+		</DerivedField>
+		<DerivedField name="float(AMT_REQ_CREDIT_BUREAU_YEAR)" optype="continuous" dataType="float">
+			<FieldRef field="AMT_REQ_CREDIT_BUREAU_YEAR"/>
+		</DerivedField>
+		<DerivedField name="float(OWN_CAR_AGE)" optype="continuous" dataType="float">
+			<FieldRef field="OWN_CAR_AGE"/>
+		</DerivedField>
+		<DerivedField name="float(REGION_POPULATION_RELATIVE)" optype="continuous" dataType="float">
+			<FieldRef field="REGION_POPULATION_RELATIVE"/>
+		</DerivedField>
+		<DerivedField name="float(NONLIVINGAREA_MEDI)" optype="continuous" dataType="float">
+			<FieldRef field="NONLIVINGAREA_MEDI"/>
+		</DerivedField>
+		<DerivedField name="float(YEARS_BEGINEXPLUATATION_AVG)" optype="continuous" dataType="float">
+			<FieldRef field="YEARS_BEGINEXPLUATATION_AVG"/>
+		</DerivedField>
+		<DerivedField name="float(HOUR_APPR_PROCESS_START)" optype="continuous" dataType="float">
+			<FieldRef field="HOUR_APPR_PROCESS_START"/>
+		</DerivedField>
+		<DerivedField name="float(LIVINGAREA_MODE)" optype="continuous" dataType="float">
+			<FieldRef field="LIVINGAREA_MODE"/>
+		</DerivedField>
+		<DerivedField name="float(YEARS_BUILD_AVG)" optype="continuous" dataType="float">
+			<FieldRef field="YEARS_BUILD_AVG"/>
+		</DerivedField>
+		<DerivedField name="float(BASEMENTAREA_MODE)" optype="continuous" dataType="float">
+			<FieldRef field="BASEMENTAREA_MODE"/>
+		</DerivedField>
+		<DerivedField name="float(APARTMENTS_AVG)" optype="continuous" dataType="float">
+			<FieldRef field="APARTMENTS_AVG"/>
+		</DerivedField>
+	</TransformationDictionary>
+	<MiningModel functionName="classification" algorithmName="XGBoost" x-mathContext="float">
+		<MiningSchema>
+			<MiningField name="y" usageType="target"/>
+			<MiningField name="SK_ID_CURR" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="DAYS_LAST_PHONE_CHANGE" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="EXT_SOURCE_1" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="AMT_CREDIT" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="DAYS_BIRTH" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="YEARS_BUILD_AVG" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="REGION_POPULATION_RELATIVE" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="AMT_ANNUITY" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="AMT_INCOME_TOTAL" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="EXT_SOURCE_3" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="YEARS_BEGINEXPLUATATION_AVG" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="NAME_EDUCATION_TYPE" missingValueReplacement="Blank" missingValueTreatment="asIs" invalidValueTreatment="asIs"/>
+			<MiningField name="NONLIVINGAREA_MEDI" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="HOUR_APPR_PROCESS_START" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="DAYS_EMPLOYED" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="AMT_REQ_CREDIT_BUREAU_YEAR" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="DAYS_REGISTRATION" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="AMT_GOODS_PRICE" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="BASEMENTAREA_MODE" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="OWN_CAR_AGE" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="APARTMENTS_AVG" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="ORGANIZATION_TYPE" missingValueReplacement="Blank" missingValueTreatment="asIs" invalidValueTreatment="asIs"/>
+			<MiningField name="DAYS_ID_PUBLISH" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="LIVINGAREA_MODE" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+			<MiningField name="EXT_SOURCE_2" missingValueReplacement="-9" missingValueTreatment="asIs"/>
+		</MiningSchema>
+		<ModelStats>
+			<UnivariateStats field="EXT_SOURCE_2">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="0.8549996664047012" mean="0.4907436062980547" standardDeviation="0.5082132293867045" median="0.5659748553432788" interQuartileRange="0.2745498281778286"/>
+			</UnivariateStats>
+			<UnivariateStats field="EXT_SOURCE_3">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="0.8854883941521002" mean="-1.3507037017558654" standardDeviation="3.7760666639085936" median="0.4578995512067301" interQuartileRange="0.45594506549174474"/>
+			</UnivariateStats>
+			<UnivariateStats field="EXT_SOURCE_1">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="0.962692770561306" mean="-4.846928464207436" standardDeviation="4.715062790164847" median="-9.0" interQuartileRange="9.457065366181961"/>
+			</UnivariateStats>
+			<UnivariateStats field="SK_ID_CURR">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="100026.0" maximum="456200.0" mean="278496.27747926646" standardDeviation="102160.74150728373" median="277798.0" interQuartileRange="175457.5"/>
+			</UnivariateStats>
+			<UnivariateStats field="DAYS_EMPLOYED">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-16852.0" maximum="365243.0" mean="64117.80037378811" standardDeviation="141547.17155578645" median="-1227.5" interQuartileRange="2480.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="AMT_ANNUITY">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="177696.0" mean="27047.230814157225" standardDeviation="14426.932498782437" median="24813.0" interQuartileRange="18034.875"/>
+			</UnivariateStats>
+			<UnivariateStats field="DAYS_BIRTH">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-25196.0" maximum="-7684.0" mean="-16074.946209554959" standardDeviation="4353.568523441331" median="-15817.5" interQuartileRange="7277.25"/>
+			</UnivariateStats>
+			<UnivariateStats field="DAYS_REGISTRATION">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-20701.0" maximum="0.0" mean="-4972.244597593739" standardDeviation="3538.293380480365" median="-4490.0" interQuartileRange="5568.75"/>
+			</UnivariateStats>
+			<UnivariateStats field="AMT_CREDIT">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="45000.0" maximum="3020760.0" mean="601180.1069092395" standardDeviation="404908.0965245488" median="513040.5" interQuartileRange="538650.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="DAYS_ID_PUBLISH">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-6265.0" maximum="-1.0" mean="-2988.0713701670365" standardDeviation="1507.4262999584528" median="-3246.0" interQuartileRange="2579.75"/>
+			</UnivariateStats>
+			<UnivariateStats field="DAYS_LAST_PHONE_CHANGE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-3859.0" maximum="0.0" mean="-971.437448896157" standardDeviation="831.9917862629693" median="-764.0" interQuartileRange="1301.75"/>
+			</UnivariateStats>
+			<UnivariateStats field="AMT_INCOME_TOTAL">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="26100.0" maximum="2025000.0" mean="168296.0134893704" standardDeviation="93136.51901754229" median="153000.0" interQuartileRange="90000.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="AMT_GOODS_PRICE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="2925000.0" mean="539758.5632519566" standardDeviation="371973.9821912964" median="450000.0" interQuartileRange="441000.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="AMT_REQ_CREDIT_BUREAU_YEAR">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="15.0" mean="0.4276369582992641" standardDeviation="4.126396590921213" median="1.0" interQuartileRange="3.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="OWN_CAR_AGE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="65.0" mean="-1.757972199509403" standardDeviation="12.16045203389382" median="-9.0" interQuartileRange="15.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="REGION_POPULATION_RELATIVE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="5.33E-4" maximum="0.072508" mean="0.020838645952576014" standardDeviation="0.013856941668611695" median="0.01885" interQuartileRange="0.018657"/>
+			</UnivariateStats>
+			<UnivariateStats field="NONLIVINGAREA_MEDI">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="1.0" mean="-4.961019699801428" standardDeviation="4.489777374778716" median="-9.0" interQuartileRange="9.0004"/>
+			</UnivariateStats>
+			<UnivariateStats field="YEARS_BEGINEXPLUATATION_AVG">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="1.0" mean="-3.8830788459292642" standardDeviation="4.986735474554673" median="0.9578" interQuartileRange="9.982099999999999"/>
+			</UnivariateStats>
+			<UnivariateStats field="HOUR_APPR_PROCESS_START">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="0.0" maximum="23.0" mean="12.113421329283963" standardDeviation="3.2590500608758703" median="12.0" interQuartileRange="4.0"/>
+			</UnivariateStats>
+			<UnivariateStats field="LIVINGAREA_MODE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="1.0" mean="-4.44935887746758" standardDeviation="4.553973089219803" median="-9.0" interQuartileRange="9.0731"/>
+			</UnivariateStats>
+			<UnivariateStats field="YEARS_BUILD_AVG">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="1.0" mean="-5.7107933886228315" standardDeviation="4.611067289179665" median="-9.0" interQuartileRange="9.6872"/>
+			</UnivariateStats>
+			<UnivariateStats field="BASEMENTAREA_MODE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="1.0" mean="-5.219036742203008" standardDeviation="4.480611534036021" median="-9.0" interQuartileRange="9.062975"/>
+			</UnivariateStats>
+			<UnivariateStats field="APARTMENTS_AVG">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<NumericInfo minimum="-9.0" maximum="1.0" mean="-4.483645152435497" standardDeviation="4.559381703500705" median="-9.0" interQuartileRange="9.0866"/>
+			</UnivariateStats>
+			<UnivariateStats field="ORGANIZATION_TYPE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<DiscrStats>
+					<Array type="string">Advertising Agriculture Bank "Business Entity Type 1" "Business Entity Type 2" "Business Entity Type 3" Cleaning Construction Culture Electricity Emergency Government Hotel Housing "Industry: type 1" "Industry: type 10" "Industry: type 11" "Industry: type 12" "Industry: type 13" "Industry: type 2" "Industry: type 3" "Industry: type 4" "Industry: type 5" "Industry: type 6" "Industry: type 7" "Industry: type 8" "Industry: type 9" Insurance Kindergarten "Legal Services" Medicine Military Mobile Other Police Postal Realtor Religion Restaurant School Security "Security Ministries" Self-employed Services Telecom "Trade: type 1" "Trade: type 2" "Trade: type 3" "Trade: type 4" "Trade: type 5" "Trade: type 6" "Trade: type 7" "Transport: type 1" "Transport: type 2" "Transport: type 3" "Transport: type 4" University XNA</Array>
+					<Array type="int">21 141 150 338 607 3764 18 384 23 44 28 612 51 165 60 6 148 23 2 31 202 47 36 7 72 3 173 31 387 17 615 146 14 942 126 128 26 4 113 498 188 113 2053 85 36 21 109 185 1 6 31 402 13 127 75 287 89 3098</Array>
+				</DiscrStats>
+			</UnivariateStats>
+			<UnivariateStats field="NAME_EDUCATION_TYPE">
+				<Counts totalFreq="17122.0" missingFreq="0.0" invalidFreq="0.0"/>
+				<DiscrStats>
+					<Array type="string">"Academic degree" "Higher education" "Incomplete higher" "Lower secondary" "Secondary / secondary special"</Array>
+					<Array type="int">5 4277 557 199 12084</Array>
+				</DiscrStats>
+			</UnivariateStats>
+		</ModelStats>
+		<Segmentation multipleModelMethod="modelChain">
+			<Segment id="1">
+				<True/>
+				<MiningModel functionName="regression" x-mathContext="float">
+					<MiningSchema>
+						<MiningField name="SK_ID_CURR"/>
+						<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+						<MiningField name="EXT_SOURCE_1"/>
+						<MiningField name="AMT_CREDIT"/>
+						<MiningField name="DAYS_BIRTH"/>
+						<MiningField name="YEARS_BUILD_AVG"/>
+						<MiningField name="REGION_POPULATION_RELATIVE"/>
+						<MiningField name="AMT_ANNUITY"/>
+						<MiningField name="AMT_INCOME_TOTAL"/>
+						<MiningField name="EXT_SOURCE_3"/>
+						<MiningField name="YEARS_BEGINEXPLUATATION_AVG"/>
+						<MiningField name="NAME_EDUCATION_TYPE"/>
+						<MiningField name="NONLIVINGAREA_MEDI"/>
+						<MiningField name="HOUR_APPR_PROCESS_START"/>
+						<MiningField name="DAYS_EMPLOYED"/>
+						<MiningField name="AMT_REQ_CREDIT_BUREAU_YEAR"/>
+						<MiningField name="DAYS_REGISTRATION"/>
+						<MiningField name="AMT_GOODS_PRICE"/>
+						<MiningField name="BASEMENTAREA_MODE"/>
+						<MiningField name="OWN_CAR_AGE"/>
+						<MiningField name="APARTMENTS_AVG"/>
+						<MiningField name="ORGANIZATION_TYPE"/>
+						<MiningField name="DAYS_ID_PUBLISH"/>
+						<MiningField name="LIVINGAREA_MODE"/>
+						<MiningField name="EXT_SOURCE_2"/>
+					</MiningSchema>
+					<Output>
+						<OutputField name="xgbValue" optype="continuous" dataType="float" feature="predictedValue" isFinalResult="false"/>
+					</Output>
+					<Segmentation multipleModelMethod="sum">
+						<Segment id="1">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+								</MiningSchema>
+								<Node score="-0.0762084">
+									<True/>
+									<Node score="-0.103778504">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.50981915"/>
+									</Node>
+									<Node score="-0.09419061">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.24652109"/>
+									</Node>
+									<Node score="-0.047251936">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.011473972"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="2">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+								</MiningSchema>
+								<Node score="-0.050573453">
+									<True/>
+									<Node score="-0.076603554">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.23352617"/>
+										<Node score="-0.100926116">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.42325"/>
+										</Node>
+										<Node score="-0.0941081">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5358958"/>
+										</Node>
+									</Node>
+									<Node score="-0.081150874">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.34171766"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="3">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+								</MiningSchema>
+								<Node score="-0.049503498">
+									<True/>
+									<Node score="-0.08306973">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.14756797"/>
+										<Node score="-0.094051465">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5282629"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="4">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+								</MiningSchema>
+								<Node score="-0.049302623">
+									<True/>
+									<Node score="-0.07573632">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.12359072"/>
+										<Node score="-0.08789002">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.45655152"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="5">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+								</MiningSchema>
+								<Node score="-0.029292198">
+									<True/>
+									<Node score="-0.076536424">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.24625564"/>
+										<Node score="-0.087370366">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4250116"/>
+										</Node>
+									</Node>
+									<Node score="-0.073399454">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.2948329"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="6">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+								</MiningSchema>
+								<Node score="-0.06406897">
+									<True/>
+									<Node score="-0.08149015">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3288591"/>
+									</Node>
+									<Node score="-0.075486735">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.43650103"/>
+									</Node>
+									<Node score="-0.043125883">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="-4.48883"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="7">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="-0.027984478">
+									<True/>
+									<Node score="-0.077664">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.26999658"/>
+									</Node>
+									<Node score="-0.048465654">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.2539845"/>
+										<Node score="-0.081863284">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.6497178"/>
+										</Node>
+										<Node score="-0.0681853">
+											<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.0036"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="8">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+								</MiningSchema>
+								<Node score="-0.032606672">
+									<True/>
+									<Node score="-0.05739874">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.17074414"/>
+										<Node score="-0.079990566">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49837047"/>
+										</Node>
+										<Node score="-0.07173094">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5427088"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="9">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+								</MiningSchema>
+								<Node score="-0.027397111">
+									<True/>
+									<Node score="-0.052378125">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.24508452"/>
+										<Node score="-0.07465171">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.41097558"/>
+										</Node>
+										<Node score="-0.06958499">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.52953243"/>
+										</Node>
+									</Node>
+									<Node score="-0.057259273">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.2560187"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="10">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+								</MiningSchema>
+								<Node score="-0.055482063">
+									<True/>
+									<Node score="-0.06789001">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.2648198"/>
+									</Node>
+									<Node score="-0.020612473">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1482.0"/>
+										<Node score="-0.046774436">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-381.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="11">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.027016742">
+									<True/>
+									<Node score="-0.06806413">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.13397476"/>
+										<Node score="-0.071337745">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5895174"/>
+										</Node>
+										<Node score="-0.05035715">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="274338.0"/>
+											<Node score="-0.06095241">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											</Node>
+											<Node score="-0.029232731">
+												<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-471.5"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="12">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.06611665">
+									<True/>
+									<Node score="-0.05481201">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-15914.0"/>
+										<Node score="-0.06540392">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.03770344">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1050.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="13">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.031900898">
+									<True/>
+									<Node score="-0.06625697">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3288591"/>
+									</Node>
+									<Node score="-0.059381377">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.49270135"/>
+									</Node>
+									<Node score="-0.0216454">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-1683.5"/>
+									</Node>
+									<Node score="-0.056434985">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="14">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+								</MiningSchema>
+								<Node score="-0.016124725">
+									<True/>
+									<Node score="-0.06240599">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.12610897"/>
+										<Node score="-0.06515065">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5717911"/>
+										</Node>
+										<Node score="-0.05858256">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.32252327"/>
+										</Node>
+										<Node score="-0.031755153">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.017218536"/>
+										</Node>
+										<Node score="-0.03487892">
+											<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2356.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="15">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.056937505">
+									<True/>
+									<Node score="-0.056581784">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-11539.5"/>
+										<Node score="-0.035052884">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Secondary / secondary special"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="16">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.014581357">
+									<True/>
+									<Node score="-0.054210667">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.1259763"/>
+										<Node score="-0.062384084">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4250116"/>
+										</Node>
+										<Node score="-0.053209558">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.54014885"/>
+										</Node>
+										<Node score="-0.022251125">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="269104.5"/>
+											<Node score="-0.043081388">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="17">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+								</MiningSchema>
+								<Node score="-0.034040287">
+									<True/>
+									<Node score="-0.033274133">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.3705125"/>
+										<Node score="-0.06361491">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4162234"/>
+										</Node>
+										<Node score="-0.03764692">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.47749895"/>
+											<Node score="-0.05737563">
+												<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="175980.5"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.048861496">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49656737"/>
+									</Node>
+									<Node score="-0.006155532">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3306.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="18">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_INCOME_TOTAL"/>
+								</MiningSchema>
+								<Node score="-0.054461908">
+									<True/>
+									<Node score="-0.05765362">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.41097558"/>
+									</Node>
+									<Node score="-0.05396178">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.27878314"/>
+									</Node>
+									<Node score="-0.01137693">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-4023.5"/>
+										<Node score="-0.03119242">
+											<SimplePredicate field="float(AMT_INCOME_TOTAL)" operator="greaterOrEqual" value="123750.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.032586858">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16697.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="19">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="YEARS_BEGINEXPLUATATION_AVG"/>
+								</MiningSchema>
+								<Node score="-0.0050946833">
+									<True/>
+									<Node score="-0.04006921">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.23670956"/>
+										<Node score="-0.057192754">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.55260575"/>
+										</Node>
+										<Node score="-0.055913586">
+											<SimplePredicate field="float(YEARS_BEGINEXPLUATATION_AVG)" operator="greaterOrEqual" value="0.98185"/>
+										</Node>
+									</Node>
+									<Node score="-0.028624894">
+										<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="262457.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="20">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.0">
+									<True/>
+									<Node score="-0.05390717">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.24670036"/>
+										<Node score="-0.05747404">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.42677513"/>
+										</Node>
+										<Node score="-0.024216402">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-844.5"/>
+										</Node>
+										<Node score="-0.01519232">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="321750.0"/>
+											<Node score="-0.04793503">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.03555442">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.24054389"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="21">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="-0.031731494">
+									<True/>
+									<Node score="-0.053630665">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.43207675"/>
+									</Node>
+									<Node score="-0.04523456">
+										<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.0627"/>
+									</Node>
+									<Node score="-0.046174034">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="677250.0"/>
+									</Node>
+									<Node score="-0.002379185">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-10996.5"/>
+									</Node>
+									<Node score="-0.013148981">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3309.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="22">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.033682752">
+									<True/>
+									<Node score="-0.053252023">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.53199685"/>
+									</Node>
+									<Node score="-0.0054433355">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16166.5"/>
+										<Node score="-0.021054514">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.25216767"/>
+											<Node score="-0.041370153">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.14268705"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.053623002">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-407.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="23">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.030464608">
+									<True/>
+									<Node score="-0.049711857">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.3568151"/>
+										<Node score="-0.03190288">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-11500.0"/>
+										</Node>
+										<Node score="-0.05388359">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.26857737"/>
+										</Node>
+										<Node score="-0.022277264">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.0638062"/>
+										</Node>
+									</Node>
+									<Node score="-0.038097143">
+										<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="299579.0"/>
+									</Node>
+									<Node score="-0.0012053476">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14608.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="24">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.04737223">
+									<True/>
+									<Node score="-0.035784747">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16310.0"/>
+										<Node score="-0.04890111">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.27321047"/>
+										</Node>
+										<Node score="-0.02420633">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1467.5"/>
+											<Node score="7.496474E-4">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="23584.5"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="25">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-5.423782E-4">
+									<True/>
+									<Node score="-0.026024282">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4214903"/>
+										<Node score="-0.05219738">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.24394983"/>
+										</Node>
+									</Node>
+									<Node score="-0.035534166">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.2590307"/>
+										<Node score="-0.0501457">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5476376"/>
+											<Node score="-0.03167681">
+												<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.05468086"/>
+											</Node>
+										</Node>
+										<Node score="-0.013505776">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16381.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="26">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="LIVINGAREA_MODE"/>
+								</MiningSchema>
+								<Node score="-0.022347452">
+									<True/>
+									<Node score="-0.040726267">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49656737"/>
+										<Node score="-0.05590808">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5457951"/>
+										</Node>
+									</Node>
+									<Node score="-0.039426114">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5226958"/>
+									</Node>
+									<Node score="-0.03505695">
+										<SimplePredicate field="float(LIVINGAREA_MODE)" operator="greaterOrEqual" value="0.05695"/>
+									</Node>
+									<Node score="-0.03116489">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.273777"/>
+									</Node>
+									<Node score="0.0031702907">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.010347626"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="27">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="HOUR_APPR_PROCESS_START"/>
+								</MiningSchema>
+								<Node score="-0.0032863985">
+									<True/>
+									<Node score="-0.04873819">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5109906"/>
+									</Node>
+									<Node score="-0.042283215">
+										<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+									</Node>
+									<Node score="-0.010662738">
+										<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="150584.5"/>
+										<Node score="-0.046261285">
+											<SimplePredicate field="float(HOUR_APPR_PROCESS_START)" operator="greaterOrEqual" value="9.5"/>
+											<Node score="-0.03052693">
+												<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="251640.0"/>
+												<Node score="-0.015138866">
+													<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-568.5"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="28">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="BASEMENTAREA_MODE"/>
+								</MiningSchema>
+								<Node score="-0.041781817">
+									<True/>
+									<Node score="-0.04866413">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49837047"/>
+									</Node>
+									<Node score="-0.040567577">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.36727428"/>
+									</Node>
+									<Node score="0.002518384">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-20397.0"/>
+										<Node score="-0.03799498">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.028024659">
+											<SimplePredicate field="float(BASEMENTAREA_MODE)" operator="greaterOrEqual" value="0.0306"/>
+										</Node>
+										<Node score="-0.014587117">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.23208207"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="29">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.042399827">
+									<True/>
+									<Node score="-0.0450952">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.33045298"/>
+									</Node>
+									<Node score="0.0023869108">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="-0.023001926">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.22952116"/>
+										</Node>
+									</Node>
+									<Node score="-0.020310195">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-464.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="30">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.016148109">
+									<True/>
+									<Node score="-0.034898024">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.530404"/>
+										<Node score="-0.047973815">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.41797698"/>
+										</Node>
+									</Node>
+									<Node score="-0.03795397">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5199975"/>
+									</Node>
+									<Node score="-0.024454143">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+									</Node>
+									<Node score="0.01470066">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="20070.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="31">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_CREDIT"/>
+								</MiningSchema>
+								<Node score="-0.021809515">
+									<True/>
+									<Node score="-0.028651088">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5645025"/>
+										<Node score="-0.05140717">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.41797698"/>
+										</Node>
+										<Node score="-0.049967196">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.24280852"/>
+										</Node>
+									</Node>
+									<Node score="-0.045343515">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.23988384"/>
+										<Node score="-0.017553598">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="291649.5"/>
+											<Node score="-0.035515483">
+												<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5163959"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.013876136">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="32">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+								</MiningSchema>
+								<Node score="-0.011432955">
+									<True/>
+									<Node score="-0.038760625">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.21215352"/>
+										<Node score="-0.045781475">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5660125"/>
+										</Node>
+										<Node score="-0.019841067">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3050.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.035565805">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.53758407"/>
+									</Node>
+									<Node score="0.003663732">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2584.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="33">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_ANNUITY"/>
+								</MiningSchema>
+								<Node score="0.0019322026">
+									<True/>
+									<Node score="-0.020368682">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5974599"/>
+										<Node score="-0.05405973">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.22363931"/>
+										</Node>
+										<Node score="-0.04461168">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3272692"/>
+										</Node>
+									</Node>
+									<Node score="-0.039374866">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5073856"/>
+									</Node>
+									<Node score="-0.04230459">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.17251"/>
+										<Node score="-0.0059978818">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="28930.5"/>
+										</Node>
+										<Node score="-0.017045448">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="34">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+								</MiningSchema>
+								<Node score="-0.023229182">
+									<True/>
+									<Node score="-0.043413028">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49837047"/>
+									</Node>
+									<Node score="-0.03148682">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5011991"/>
+									</Node>
+									<Node score="0.014785742">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="-0.017383905">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.26434812"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="35">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="-0.021272441">
+									<True/>
+									<Node score="-0.013760668">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.41272265"/>
+										<Node score="-0.04548564">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.2722286"/>
+										</Node>
+									</Node>
+									<Node score="-0.009812856">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5068214"/>
+										<Node score="-0.039134786">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.27917677"/>
+										</Node>
+										<Node score="-0.029089864">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0189755"/>
+										</Node>
+									</Node>
+									<Node score="0.004436464">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3050.5"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2575.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="36">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="-0.036363594">
+									<True/>
+									<Node score="-0.04499932">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5620549"/>
+										<Node score="-0.019373536">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1537.5"/>
+											<Node score="-0.039234113">
+												<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0189755"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.008613288">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="244548.0"/>
+										<Node score="-0.02488524">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5109906"/>
+										</Node>
+										<Node score="-0.017591896">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.27878314"/>
+										</Node>
+										<Node score="0.012293393">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16491.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="37">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="OWN_CAR_AGE"/>
+								</MiningSchema>
+								<Node score="-0.034298122">
+									<True/>
+									<Node score="-0.046099275">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.55059004"/>
+									</Node>
+									<Node score="-0.03777926">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4005415"/>
+										<Node score="-0.021332635">
+											<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2663.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.011301997">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-740.5"/>
+										<Node score="-0.018856479">
+											<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="-4.5"/>
+										</Node>
+										<Node score="0.010064322">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.010347626"/>
+										</Node>
+									</Node>
+									<Node score="-0.01383515">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.06446269"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="38">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="BASEMENTAREA_MODE"/>
+								</MiningSchema>
+								<Node score="-0.041038983">
+									<True/>
+									<Node score="-0.021461274">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-20660.5"/>
+										<Node score="-0.02677408">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Secondary / secondary special"/>
+											<Node score="-0.025827356">
+												<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-2086.0"/>
+												<Node score="-0.0">
+													<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1213.0"/>
+													<Node score="0.012264303">
+														<SimplePredicate field="float(BASEMENTAREA_MODE)" operator="greaterOrEqual" value="-4.5"/>
+													</Node>
+													<Node score="-0.017326776">
+														<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.29935136"/>
+													</Node>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.040102627">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.26434812"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="39">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_ANNUITY"/>
+								</MiningSchema>
+								<Node score="-0.0">
+									<True/>
+									<Node score="-0.022607587">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.544152"/>
+										<Node score="-0.049555533">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.039449506">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4162234"/>
+										</Node>
+									</Node>
+									<Node score="-0.0044152564">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3115918"/>
+										<Node score="-0.039101508">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.33383662"/>
+										</Node>
+										<Node score="-0.027500894">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5199975"/>
+										</Node>
+									</Node>
+									<Node score="0.008769455">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="27256.5"/>
+									</Node>
+									<Node score="-0.014112978">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.3122716"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="40">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="OWN_CAR_AGE"/>
+								</MiningSchema>
+								<Node score="-0.0123403">
+									<True/>
+									<Node score="-0.04552612">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.47987"/>
+										<Node score="-0.015335058">
+											<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="9.5"/>
+										</Node>
+										<Node score="-0.017266085">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="19678.5"/>
+											<Node score="-0.03744634">
+												<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3115918"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.030595621">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.52719384"/>
+									</Node>
+									<Node score="-0.0068685557">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="0.017075442">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="416965.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="41">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="-0.0064485073">
+									<True/>
+									<Node score="-0.03720571">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5163959"/>
+									</Node>
+									<Node score="-0.032911703">
+										<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+									</Node>
+									<Node score="-0.028864952">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="677250.0"/>
+									</Node>
+									<Node score="-0.0027599498">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="20142.0"/>
+										<Node score="0.021846447">
+											<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="312260.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.02938742">
+										<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0189755"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="42">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_REQ_CREDIT_BUREAU_YEAR"/>
+								</MiningSchema>
+								<Node score="0.0017474658">
+									<True/>
+									<Node score="-0.036793433">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.13433453"/>
+										<Node score="-0.03968107">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.015484443">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16309.5"/>
+											<Node score="0.0013527095">
+												<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1188.5"/>
+											</Node>
+											<Node score="-0.03716278">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.21371737"/>
+											</Node>
+										</Node>
+										<Node score="-0.019637356">
+											<SimplePredicate field="float(AMT_REQ_CREDIT_BUREAU_YEAR)" operator="greaterOrEqual" value="1.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="43">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.021483565">
+									<True/>
+									<Node score="-0.042283412">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.31625196"/>
+										<Node score="-0.030222949">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Secondary / secondary special"/>
+											<Node score="-0.015597335">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16130.5"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.007077078">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-17121.5"/>
+										<Node score="0.007804697">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="44">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_CREDIT"/>
+								</MiningSchema>
+								<Node score="-0.013112614">
+									<True/>
+									<Node score="-0.04079553">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.66321427"/>
+									</Node>
+									<Node score="-0.0016937093">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.25878498"/>
+										<Node score="-0.035679854">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.029943159">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.424342"/>
+										</Node>
+										<Node score="-0.026139181">
+											<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="213285.0"/>
+											<Node score="-0.0077713216">
+												<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="490515.75"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.0021159633">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-904.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="45">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="0.015883967">
+									<True/>
+									<Node score="-0.040949278">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.47747713"/>
+										<Node score="-0.0080916835">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16876.0"/>
+											<Node score="-0.042728834">
+												<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+											</Node>
+											<Node score="-0.026777577">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.2463288"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.02056586">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5091883"/>
+									</Node>
+									<Node score="-0.011330469">
+										<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.056199998"/>
+									</Node>
+									<Node score="-0.0013799146">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-13099.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="46">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.03529261">
+									<True/>
+									<Node score="-0.009660888">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-19255.5"/>
+										<Node score="-0.039490364">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.26231462"/>
+											<Node score="-0.025100496">
+												<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1359.0"/>
+												<Node score="-0.0043439465">
+													<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1386.5"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.02603971">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											<Node score="-0.0050268895">
+												<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1574.5"/>
+											</Node>
+										</Node>
+										<Node score="0.029002942">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="312750.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="47">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="-0.008547307">
+									<True/>
+									<Node score="-0.037303265">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3272692"/>
+										<Node score="-0.0067665474">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-2057.5"/>
+											<Node score="-0.026147328">
+												<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.010528"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.021802757">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="-0.002945943">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0189755"/>
+										</Node>
+									</Node>
+									<Node score="-0.032499067">
+										<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0189755"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="48">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="-0.0060428074">
+									<True/>
+									<Node score="-0.001135682">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3288591"/>
+										<Node score="-0.03563069">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.024887"/>
+										</Node>
+										<Node score="-0.029465938">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.63887554"/>
+										</Node>
+										<Node score="-0.01937443">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-809.5"/>
+										</Node>
+									</Node>
+									<Node score="0.02122425">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="-0.0065137083">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.019395"/>
+										</Node>
+									</Node>
+									<Node score="-0.027714942">
+										<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.0057"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="49">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="YEARS_BEGINEXPLUATATION_AVG"/>
+								</MiningSchema>
+								<Node score="-0.016082063">
+									<True/>
+									<Node score="0.0020572424">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="270555.75"/>
+										<Node score="-0.0116350595">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.31708878"/>
+											<Node score="-0.036597528">
+												<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.52573913"/>
+											</Node>
+										</Node>
+										<Node score="-0.0175522">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49837047"/>
+										</Node>
+										<Node score="-0.0040651467">
+											<SimplePredicate field="float(YEARS_BEGINEXPLUATATION_AVG)" operator="greaterOrEqual" value="0.97784996"/>
+										</Node>
+										<Node score="0.02852447">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1191.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.040771417">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.43097496"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="50">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.0016922615">
+									<True/>
+									<Node score="-0.040867776">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.50973177"/>
+										<Node score="-0.003937697">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="364698.0"/>
+											<Node score="-0.03504277">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.22901237"/>
+											</Node>
+											<Node score="-0.0206554">
+												<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.6451156"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.021956977">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-9.5"/>
+									</Node>
+									<Node score="0.012253643">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3753.5"/>
+										<Node score="-0.00219555">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.3122716"/>
+										</Node>
+									</Node>
+									<Node score="-0.015627448">
+										<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="268878.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="51">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-3.474329E-4">
+									<True/>
+									<Node score="-0.012882502">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.24683255"/>
+										<Node score="-0.016482582">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="450117.0"/>
+											<Node score="-0.035949867">
+												<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-865.0"/>
+											</Node>
+										</Node>
+										<Node score="0.011149772">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="317250.0"/>
+										</Node>
+										<Node score="-0.03366243">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.50163376"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="52">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="-3.4189282E-4">
+									<True/>
+									<Node score="-0.0046142573">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3069695"/>
+										<Node score="-0.037455864">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.029375337">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.45349044"/>
+											<Node score="-0.01023989">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="27191.25"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.009420246">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+									</Node>
+									<Node score="-0.020834245">
+										<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.0057"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="53">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="-0.0114761265">
+									<True/>
+									<Node score="-4.7399025E-4">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.4786639"/>
+										<Node score="-0.033865873">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.026258208">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.23485886"/>
+										</Node>
+										<Node score="-0.021046463">
+											<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.029399998"/>
+										</Node>
+									</Node>
+									<Node score="-0.0184681">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5199975"/>
+									</Node>
+									<Node score="0.021428201">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="0.0014444033">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3069695"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="54">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.023698626">
+									<True/>
+									<Node score="0.0045063314">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.23208207"/>
+										<Node score="-0.035465967">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.55059004"/>
+										</Node>
+										<Node score="-0.027357982">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.64799154"/>
+										</Node>
+										<Node score="-3.8036084E-4">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-6221.5"/>
+											<Node score="-0.030097056">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.029192932">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2412.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="55">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+								</MiningSchema>
+								<Node score="-0.007836404">
+									<True/>
+									<Node score="0.009608207">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-710.5"/>
+									</Node>
+									<Node score="-0.02994754">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.37119618"/>
+										<Node score="-0.0025756042">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-12241.5"/>
+										</Node>
+										<Node score="-0.00951453">
+											<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="357361.0"/>
+										</Node>
+									</Node>
+									<Node score="0.0067891623">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3440.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="56">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="-0.021024056">
+									<True/>
+									<Node score="-0.034266025">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.5374595"/>
+									</Node>
+									<Node score="-0.005773131">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-18749.5"/>
+										<Node score="0.02154997">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1494.5"/>
+											<Node score="0.0042841136">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14193.5"/>
+												<Node score="-0.015461078">
+													<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="251836.5"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.023584833">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-2988.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="57">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.024876619">
+									<True/>
+									<Node score="-0.0">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="252954.0"/>
+										<Node score="-0.022479441">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.013393715">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1096.5"/>
+											<Node score="0.022918412">
+												<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-3510.5"/>
+												<Node score="-0.0">
+													<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="507080.25"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.02320487">
+											<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-3501.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="58">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="YEARS_BEGINEXPLUATATION_AVG"/>
+								</MiningSchema>
+								<Node score="-0.033982754">
+									<True/>
+									<Node score="-0.020558663">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="12330.0"/>
+										<Node score="-0.027872086">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.5538238"/>
+										</Node>
+										<Node score="-0.0033583445">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1502.5"/>
+											<Node score="-0.01331981">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="36533.25"/>
+											</Node>
+											<Node score="0.001472347">
+												<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="447912.0"/>
+												<Node score="0.023077747">
+													<SimplePredicate field="float(YEARS_BEGINEXPLUATATION_AVG)" operator="greaterOrEqual" value="0.96994996"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="59">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+									<MiningField name="YEARS_BUILD_AVG"/>
+								</MiningSchema>
+								<Node score="-0.015769146">
+									<True/>
+									<Node score="-0.028374868">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.67250776"/>
+									</Node>
+									<Node score="-0.024365503">
+										<SimplePredicate field="float(YEARS_BUILD_AVG)" operator="greaterOrEqual" value="0.7518"/>
+									</Node>
+									<Node score="-0.010123047">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1515.5"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.009643501"/>
+											<Node score="-0.0034965074">
+												<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-113.0"/>
+											</Node>
+											<Node score="0.021497762">
+												<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-3347.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="60">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_INCOME_TOTAL"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="0.0039003137">
+									<True/>
+									<Node score="-0.031245321">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.5254133"/>
+									</Node>
+									<Node score="-0.02600693">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.65371287"/>
+									</Node>
+									<Node score="0.030927226">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="24682.5"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="479250.0"/>
+											<Node score="-0.015349576">
+												<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.018825501"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.022354634">
+										<SimplePredicate field="float(AMT_INCOME_TOTAL)" operator="greaterOrEqual" value="91125.0"/>
+										<Node score="-0.0054088156">
+											<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="300128.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="61">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+								</MiningSchema>
+								<Node score="-0.026453728">
+									<True/>
+									<Node score="-0.027095526">
+										<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+									</Node>
+									<Node score="0.01401028">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14088.0"/>
+										<Node score="-0.009943828">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.1565479"/>
+										</Node>
+									</Node>
+									<Node score="-8.054367E-4">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="28964.25"/>
+									</Node>
+									<Node score="-0.010205485">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-4002.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="62">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.023064291">
+									<True/>
+									<Node score="-0.024344476">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.66321427"/>
+									</Node>
+									<Node score="0.006139705">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-20622.5"/>
+										<Node score="-0.01620027">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											<Node score="0.0039861626">
+												<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1104.5"/>
+											</Node>
+										</Node>
+										<Node score="0.032907642">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="427475.25"/>
+										</Node>
+										<Node score="-0.0123020215">
+											<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.17476073"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="63">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="NONLIVINGAREA_MEDI"/>
+									<MiningField name="YEARS_BUILD_AVG"/>
+								</MiningSchema>
+								<Node score="0.015841104">
+									<True/>
+									<Node score="-0.0">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.55977666"/>
+										<Node score="-0.032197487">
+											<SimplePredicate field="float(YEARS_BUILD_AVG)" operator="greaterOrEqual" value="0.57500005"/>
+										</Node>
+										<Node score="-0.024155991">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.43207675"/>
+										</Node>
+									</Node>
+									<Node score="-0.014228415">
+										<SimplePredicate field="float(NONLIVINGAREA_MEDI)" operator="greaterOrEqual" value="0.0028"/>
+									</Node>
+									<Node score="-0.004943246">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-12448.0"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2970.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="64">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="HOUR_APPR_PROCESS_START"/>
+								</MiningSchema>
+								<Node score="-0.032923512">
+									<True/>
+									<Node score="0.010264164">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-9120.5"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.21396935"/>
+											<Node score="-0.028971793">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.43405977"/>
+											</Node>
+											<Node score="-0.017610189">
+												<SimplePredicate field="float(HOUR_APPR_PROCESS_START)" operator="greaterOrEqual" value="11.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.0059338724">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-12233.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="65">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_CREDIT"/>
+								</MiningSchema>
+								<Node score="0.011330239">
+									<True/>
+									<Node score="-0.023525262">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.17081228"/>
+										<Node score="-0.030452851">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.42677513"/>
+											<Node score="-0.014778036">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-17504.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.0">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="271260.0"/>
+											<Node score="-0.01318001">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.27897343"/>
+											</Node>
+											<Node score="0.017148698">
+												<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5048864"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="66">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.026228093">
+									<True/>
+									<Node score="0.011793409">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14799.0"/>
+										<Node score="-0.020814432">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.2562033"/>
+											<Node score="-0.0">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="21192.75"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.033330485">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.6220741"/>
+									</Node>
+									<Node score="0.0045547625">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1409.5"/>
+										<Node score="-0.020934375">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-334.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="67">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.023532925">
+									<True/>
+									<Node score="-0.025988055">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.49656737"/>
+										<Node score="-0.0015599757">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14541.0"/>
+										</Node>
+									</Node>
+									<Node score="0.022740996">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="-0.013989149">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.21215352"/>
+											<Node score="0.009327992">
+												<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.36478087"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.0023816722">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-582.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="68">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+								</MiningSchema>
+								<Node score="0.021344988">
+									<True/>
+									<Node score="-0.013167367">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.58497226"/>
+										<Node score="-0.030043086">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.42325"/>
+										</Node>
+									</Node>
+									<Node score="0.0138033265">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.17035757"/>
+										<Node score="-0.015996652">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-327.0"/>
+										</Node>
+										<Node score="-0.014348491">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.20150635"/>
+											<Node score="0.0024230534">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14009.5"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="69">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.02234551">
+									<True/>
+									<Node score="-0.026372602">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-9.5"/>
+									</Node>
+									<Node score="-0.022339536">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.4604251"/>
+									</Node>
+									<Node score="0.0171089">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-1238.5"/>
+									</Node>
+									<Node score="0.008652454">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-479.5"/>
+									</Node>
+									<Node score="-0.0027546799">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="384750.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="70">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="0.019032013">
+									<True/>
+									<Node score="-0.031489428">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.5900031"/>
+									</Node>
+									<Node score="-0.022580553">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.1597526"/>
+										<Node score="0.012310604">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-3840.5"/>
+											<Node score="-0.009749974">
+												<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.022712499"/>
+											</Node>
+										</Node>
+										<Node score="-0.0">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0199675"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="71">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="AMT_INCOME_TOTAL"/>
+								</MiningSchema>
+								<Node score="-0.017376091">
+									<True/>
+									<Node score="-0.023035418">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.5188397"/>
+									</Node>
+									<Node score="0.023996841">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="246816.0"/>
+										<Node score="-0.014507958">
+											<SimplePredicate field="float(AMT_INCOME_TOTAL)" operator="greaterOrEqual" value="97321.5"/>
+											<Node score="-0.0051445533">
+												<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1638.5"/>
+												<Node score="0.017372066">
+													<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16688.5"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="72">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="AMT_REQ_CREDIT_BUREAU_YEAR"/>
+									<MiningField name="HOUR_APPR_PROCESS_START"/>
+								</MiningSchema>
+								<Node score="-0.023246933">
+									<True/>
+									<Node score="-0.02632225">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5325839"/>
+										<Node score="-0.0036591918">
+											<SimplePredicate field="float(AMT_REQ_CREDIT_BUREAU_YEAR)" operator="greaterOrEqual" value="1.5"/>
+										</Node>
+									</Node>
+									<Node score="0.02756187">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="13909.5"/>
+										<Node score="-0.0130628375">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											<Node score="0.004299026">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="33529.5"/>
+											</Node>
+										</Node>
+										<Node score="-0.0">
+											<SimplePredicate field="float(HOUR_APPR_PROCESS_START)" operator="greaterOrEqual" value="12.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="73">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="OWN_CAR_AGE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="0.0017971685">
+									<True/>
+									<Node score="-0.0">
+										<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="-4.5"/>
+										<Node score="-0.020417165">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-4763.5"/>
+										</Node>
+									</Node>
+									<Node score="0.011453478">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-1937.5"/>
+									</Node>
+									<Node score="-0.0149860885">
+										<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.018717501"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="74">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.014325895">
+									<True/>
+									<Node score="-0.022953127">
+										<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+									</Node>
+									<Node score="-0.008663632">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-8293.0"/>
+										<Node score="0.027489495">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="247387.5"/>
+											<Node score="-0.00892784">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+												<Node score="0.006813433">
+													<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="33763.5"/>
+												</Node>
+											</Node>
+											<Node score="0.004779927">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-14037.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="75">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="AMT_REQ_CREDIT_BUREAU_YEAR"/>
+								</MiningSchema>
+								<Node score="-0.02921485">
+									<True/>
+									<Node score="-0.017382002">
+										<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Secondary / secondary special"/>
+										<Node score="0.024986334">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1062.5"/>
+											<Node score="-0.0">
+												<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-9.5"/>
+											</Node>
+											<Node score="-0.0">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+											</Node>
+										</Node>
+										<Node score="0.0018704387">
+											<SimplePredicate field="float(AMT_REQ_CREDIT_BUREAU_YEAR)" operator="greaterOrEqual" value="1.5"/>
+										</Node>
+									</Node>
+									<Node score="-3.183535E-4">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.030476328"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="76">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+								</MiningSchema>
+								<Node score="-1.3049763E-4">
+									<True/>
+									<Node score="-0.032862917">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.54853404"/>
+										<Node score="-0.021630352">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1998.5"/>
+											<Node score="-0.0">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="25893.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.021501767">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.5199975"/>
+									</Node>
+									<Node score="-0.0019407165">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.21215352"/>
+									</Node>
+									<Node score="0.021151863">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2492.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="77">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.015452629">
+									<True/>
+									<Node score="-0.0010945164">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.55977666"/>
+										<Node score="-0.02859436">
+											<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="253037.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.016563807">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="797028.75"/>
+									</Node>
+									<Node score="0.017747322">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="25564.5"/>
+									</Node>
+									<Node score="0.0046231826">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-517.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="78">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_INCOME_TOTAL"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="0.006163888">
+									<True/>
+									<Node score="-0.016726054">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="677250.0"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="25962.75"/>
+										<Node score="0.02246051">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1088.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.014708018">
+										<SimplePredicate field="float(AMT_INCOME_TOTAL)" operator="greaterOrEqual" value="90900.0"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-885.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="79">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_CREDIT"/>
+								</MiningSchema>
+								<Node score="1.8521145E-4">
+									<True/>
+									<Node score="-0.01905513">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.2451838"/>
+										<Node score="-0.009887909">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-990.0"/>
+											<Node score="0.012327112">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-17301.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.01930042">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+									</Node>
+									<Node score="-0.012040503">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="468409.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="80">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="OWN_CAR_AGE"/>
+								</MiningSchema>
+								<Node score="-0.021716153">
+									<True/>
+									<Node score="-0.029047573">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-81.5"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="-4.5"/>
+										<Node score="-0.027087437">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-13746.5"/>
+										</Node>
+									</Node>
+									<Node score="0.030689996">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="24873.75"/>
+										<Node score="-0.0049290275">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="659250.0"/>
+										</Node>
+									</Node>
+									<Node score="0.0051271757">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1274.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="81">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+								</MiningSchema>
+								<Node score="-0.013712964">
+									<True/>
+									<Node score="-0.020975221">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.2644884"/>
+										<Node score="-3.6856998E-4">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="28991.25"/>
+										</Node>
+									</Node>
+									<Node score="-0.010728008">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-19975.0"/>
+										<Node score="0.031001601">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="16535.25"/>
+											<Node score="0.011315747">
+												<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.34835207"/>
+												<Node score="-0.0041925195">
+													<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-4164.5"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="82">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="NAME_EDUCATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="OWN_CAR_AGE"/>
+									<MiningField name="APARTMENTS_AVG"/>
+								</MiningSchema>
+								<Node score="0.008944644">
+									<True/>
+									<Node score="-0.0">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.2543388"/>
+										<Node score="-0.026500136">
+											<SimplePredicate field="NAME_EDUCATION_TYPE" operator="equal" value="Higher education"/>
+										</Node>
+										<Node score="-0.015636908">
+											<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="2.5"/>
+										</Node>
+										<Node score="-0.0133964345">
+											<SimplePredicate field="float(APARTMENTS_AVG)" operator="greaterOrEqual" value="0.031149998"/>
+										</Node>
+										<Node score="0.012969762">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.50063056"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="83">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="LIVINGAREA_MODE"/>
+								</MiningSchema>
+								<Node score="0.012384728">
+									<True/>
+									<Node score="-0.016790846">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.6533323"/>
+									</Node>
+									<Node score="-0.010695817">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.45892337"/>
+									</Node>
+									<Node score="0.023043156">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="-4.4908195"/>
+									</Node>
+									<Node score="-0.009423981">
+										<SimplePredicate field="float(LIVINGAREA_MODE)" operator="greaterOrEqual" value="0.04845"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="347382.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="84">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-0.008515364">
+									<True/>
+									<Node score="-0.028444523">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="38135.25"/>
+										</Node>
+										<Node score="-0.006852177">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-15898.5"/>
+										</Node>
+									</Node>
+									<Node score="0.016820753">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="269991.0"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2243.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="85">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+									<MiningField name="YEARS_BUILD_AVG"/>
+								</MiningSchema>
+								<Node score="-0.010908231">
+									<True/>
+									<Node score="-0.0020261218">
+										<SimplePredicate field="float(YEARS_BUILD_AVG)" operator="greaterOrEqual" value="0.3166"/>
+										<Node score="-0.021424297">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-4581.0"/>
+										</Node>
+									</Node>
+									<Node score="0.018660728">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1100.5"/>
+										<Node score="-0.0028332565">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+										</Node>
+										<Node score="0.0011325938">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.018717501"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="86">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_INCOME_TOTAL"/>
+								</MiningSchema>
+								<Node score="-0.012065397">
+									<True/>
+									<Node score="-0.020503702">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.65504146"/>
+									</Node>
+									<Node score="-0.0139545">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-183.5"/>
+									</Node>
+									<Node score="0.013023897">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-611.5"/>
+									</Node>
+									<Node score="0.006296613">
+										<SimplePredicate field="float(AMT_INCOME_TOTAL)" operator="greaterOrEqual" value="141750.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="87">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="YEARS_BEGINEXPLUATATION_AVG"/>
+								</MiningSchema>
+								<Node score="0.014023021">
+									<True/>
+									<Node score="-0.016752632">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.24321201"/>
+										<Node score="-0.022611056">
+											<SimplePredicate field="float(YEARS_BEGINEXPLUATATION_AVG)" operator="greaterOrEqual" value="0.98434997"/>
+										</Node>
+										<Node score="0.012647698">
+											<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="368943.0"/>
+										</Node>
+										<Node score="0.0077882716">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1291.5"/>
+											<Node score="-0.0063857227">
+												<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3288591"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="88">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="OWN_CAR_AGE"/>
+								</MiningSchema>
+								<Node score="-0.01283379">
+									<True/>
+									<Node score="-0.023236094">
+										<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="-4.5"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(OWN_CAR_AGE)" operator="greaterOrEqual" value="11.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.0027962946">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="247387.5"/>
+										<Node score="0.0011937676">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1198.5"/>
+											<Node score="0.021275235">
+												<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-682.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="89">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+								</MiningSchema>
+								<Node score="-0.026356742">
+									<True/>
+									<Node score="0.018776337">
+										<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-16697.0"/>
+										<Node score="0.013829215">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-6577.0"/>
+											<Node score="-0.012434666">
+												<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.2644884"/>
+											</Node>
+											<Node score="-0.002906254">
+												<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-11302.5"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-7.3963706E-4">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-1011.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="90">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="DAYS_BIRTH"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="0.008464471">
+									<True/>
+									<Node score="-0.016869059">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="677250.0"/>
+									</Node>
+									<Node score="-0.016768895">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-146.5"/>
+									</Node>
+									<Node score="0.026672438">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1169.0"/>
+										<Node score="3.648584E-4">
+											<SimplePredicate field="float(DAYS_BIRTH)" operator="greaterOrEqual" value="-11775.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.013994254">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.47866935"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="91">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="ORGANIZATION_TYPE"/>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+								</MiningSchema>
+								<Node score="-0.009257584">
+									<True/>
+									<Node score="-0.018454058">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.5574065"/>
+									</Node>
+									<Node score="0.015414937">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="-4.4997363"/>
+										<Node score="0.021194657">
+											<SimplePredicate field="ORGANIZATION_TYPE" operator="equal" value="Business Entity Type 3"/>
+										</Node>
+										<Node score="-0.009976012">
+											<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2211.0"/>
+										</Node>
+										<Node score="-0.0">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.4214903"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="92">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_CREDIT"/>
+								</MiningSchema>
+								<Node score="-0.008288352">
+									<True/>
+									<Node score="-0.0025188795">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-1618.5"/>
+										<Node score="0.019988708">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="29234.25"/>
+										</Node>
+										<Node score="-0.015940266">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="427698.0"/>
+										</Node>
+										<Node score="0.012799821">
+											<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="255379.5"/>
+										</Node>
+									</Node>
+									<Node score="-0.026495753">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.25449002"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="93">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="EXT_SOURCE_1"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_INCOME_TOTAL"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="LIVINGAREA_MODE"/>
+								</MiningSchema>
+								<Node score="0.03692966">
+									<True/>
+									<Node score="-0.005067182">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="450117.0"/>
+										<Node score="-0.0">
+											<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-920.5"/>
+										</Node>
+										<Node score="-0.023259712">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.35316378"/>
+										</Node>
+									</Node>
+									<Node score="-0.007890235">
+										<SimplePredicate field="float(EXT_SOURCE_1)" operator="greaterOrEqual" value="0.26461142"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(LIVINGAREA_MODE)" operator="greaterOrEqual" value="0.0352"/>
+									</Node>
+									<Node score="0.0048949607">
+										<SimplePredicate field="float(AMT_INCOME_TOTAL)" operator="greaterOrEqual" value="130275.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="94">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="YEARS_BUILD_AVG"/>
+								</MiningSchema>
+								<Node score="0.018069524">
+									<True/>
+									<Node score="-0.014701926">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-238.5"/>
+									</Node>
+									<Node score="-0.0078011868">
+										<SimplePredicate field="float(YEARS_BUILD_AVG)" operator="greaterOrEqual" value="0.22819999"/>
+									</Node>
+									<Node score="0.0060571195">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.26155245"/>
+										<Node score="-0.008133654">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="452250.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="95">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="HOUR_APPR_PROCESS_START"/>
+								</MiningSchema>
+								<Node score="0.012990247">
+									<True/>
+									<Node score="0.010729218">
+										<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.1561646"/>
+										<Node score="-0.019584876">
+											<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-865.5"/>
+											<Node score="-0.0">
+												<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="28973.25"/>
+											</Node>
+										</Node>
+										<Node score="-0.0038981554">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-4129.0"/>
+										</Node>
+									</Node>
+									<Node score="-5.5735174E-4">
+										<SimplePredicate field="float(HOUR_APPR_PROCESS_START)" operator="greaterOrEqual" value="12.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="96">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="DAYS_EMPLOYED"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="-2.1570947E-4">
+									<True/>
+									<Node score="0.0063651884">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="21107.25"/>
+										<Node score="-0.010900439">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="677250.0"/>
+										</Node>
+										<Node score="0.02750669">
+											<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.39881098"/>
+										</Node>
+									</Node>
+									<Node score="-0.018769613">
+										<SimplePredicate field="float(DAYS_EMPLOYED)" operator="greaterOrEqual" value="-611.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="97">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_3"/>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+								</MiningSchema>
+								<Node score="0.009450506">
+									<True/>
+									<Node score="-0.02629248">
+										<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="171036.5"/>
+										<Node score="0.013276311">
+											<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="27524.25"/>
+											<Node score="-0.0055112643">
+												<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="672750.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.0">
+											<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-5228.5"/>
+											<Node score="-0.015852777">
+												<SimplePredicate field="float(EXT_SOURCE_3)" operator="greaterOrEqual" value="0.3069695"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="98">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="AMT_CREDIT"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+								</MiningSchema>
+								<Node score="-0.01746381">
+									<True/>
+									<Node score="0.01199864">
+										<SimplePredicate field="float(AMT_CREDIT)" operator="greaterOrEqual" value="252265.5"/>
+										<Node score="-0.0028040109">
+											<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.28244826"/>
+											<Node score="-0.010891015">
+												<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-2131.5"/>
+											</Node>
+											<Node score="0.016352205">
+												<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-3589.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="99">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="EXT_SOURCE_2"/>
+									<MiningField name="DAYS_REGISTRATION"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="REGION_POPULATION_RELATIVE"/>
+								</MiningSchema>
+								<Node score="0.014555799">
+									<True/>
+									<Node score="-0.0032165449">
+										<SimplePredicate field="float(EXT_SOURCE_2)" operator="greaterOrEqual" value="0.5024046"/>
+										<Node score="-0.024280256">
+											<SimplePredicate field="float(REGION_POPULATION_RELATIVE)" operator="greaterOrEqual" value="0.0189755"/>
+										</Node>
+									</Node>
+									<Node score="-0.0066544926">
+										<SimplePredicate field="float(DAYS_REGISTRATION)" operator="greaterOrEqual" value="-1461.5"/>
+									</Node>
+									<Node score="-0.0">
+										<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="442091.25"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="100">
+							<True/>
+							<TreeModel functionName="regression" missingValueStrategy="none" noTrueChildStrategy="returnLastPrediction" splitCharacteristic="multiSplit" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="SK_ID_CURR"/>
+									<MiningField name="AMT_ANNUITY"/>
+									<MiningField name="DAYS_ID_PUBLISH"/>
+									<MiningField name="DAYS_LAST_PHONE_CHANGE"/>
+									<MiningField name="AMT_GOODS_PRICE"/>
+									<MiningField name="YEARS_BEGINEXPLUATATION_AVG"/>
+								</MiningSchema>
+								<Node score="-0.018916225">
+									<True/>
+									<Node score="0.013608494">
+										<SimplePredicate field="float(DAYS_ID_PUBLISH)" operator="greaterOrEqual" value="-1055.5"/>
+									</Node>
+									<Node score="0.010683899">
+										<SimplePredicate field="float(AMT_ANNUITY)" operator="greaterOrEqual" value="30807.0"/>
+										<Node score="-0.0026108725">
+											<SimplePredicate field="float(AMT_GOODS_PRICE)" operator="greaterOrEqual" value="699750.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.024109613">
+										<SimplePredicate field="float(DAYS_LAST_PHONE_CHANGE)" operator="greaterOrEqual" value="-183.5"/>
+									</Node>
+									<Node score="0.0028869912">
+										<SimplePredicate field="float(YEARS_BEGINEXPLUATATION_AVG)" operator="greaterOrEqual" value="0.95879996"/>
+									</Node>
+									<Node score="-0.0026312561">
+										<SimplePredicate field="float(SK_ID_CURR)" operator="greaterOrEqual" value="281830.5"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+					</Segmentation>
+				</MiningModel>
+			</Segment>
+			<Segment id="2">
+				<True/>
+				<RegressionModel functionName="classification" normalizationMethod="logit" x-mathContext="float">
+					<MiningSchema>
+						<MiningField name="y" usageType="target"/>
+						<MiningField name="xgbValue"/>
+					</MiningSchema>
+					<Output>
+						<OutputField name="probability(0)" optype="continuous" dataType="float" feature="probability" value="0"/>
+						<OutputField name="probability(1)" optype="continuous" dataType="float" feature="probability" value="1"/>
+					</Output>
+					<RegressionTable intercept="0.0" targetCategory="1">
+						<NumericPredictor name="xgbValue" coefficient="1.0"/>
+					</RegressionTable>
+					<RegressionTable intercept="0.0" targetCategory="0"/>
+				</RegressionModel>
+			</Segment>
+		</Segmentation>
+	</MiningModel>
+</PMML>
