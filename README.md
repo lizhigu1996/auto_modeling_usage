@@ -14,6 +14,9 @@
 ### 用法
 
 参考auto\_modeling\_usage\_自定义.ipynb和auto\_modeling\_usage\_全自动.ipynb了解如何使用
+
+可直接点击下面的链接直接查看自动生成的HTML报表（需等待10S-30S）：
+[result_report](http://htmlpreview.github.io/?https://github.com/lizhigu1996/auto_modeling_usage/blob/master/usage/result/result_report_complete.html)
  
 
 
